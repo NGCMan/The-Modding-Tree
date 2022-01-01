@@ -1,28 +1,32 @@
 let modInfo = {
-	name: "The ??? Tree",
-	id: "mymod",
-	author: "nobody",
-	pointsName: "points",
+	name: "The Trolling Tree",
+	id: "bestid12345",
+	author: "Nintendo Gamecube Man",
+	pointsName: "องคชาต",
 	modFiles: ["layers.js", "tree.js"],
 
-	discordName: "",
-	discordLink: "",
-	initialStartPoints: new Decimal (10), // Used for hard resets and new players
+	discordName: "epic server (join or u suk lol)",
+	discordLink: "https://discord.gg/egg",
+	initialStartPoints: new Decimal (0), // Used for hard resets and new players
 	offlineLimit: 1,  // In hours
 }
 
 // Set your version in num and name
 let VERSION = {
-	num: "0.0",
-	name: "Literally nothing",
+	num: "0.1",
+	name: "Aged like milk? Or fine wine?",
 }
 
 let changelog = `<h1>Changelog:</h1><br>
-	<h3>v0.0</h3><br>
-		- Added things.<br>
-		- Added stuff.`
+<h3>v0.1 - Aged like milk? Or fine wine?</h3><br>
+	- Published this mod.<br>
+	- Inital release content.
+<br><br>
+	<h3>v0.0 - Predicting 2022.</h3><br>
+		- Started development on Dec. 17, 2021.<br>
+		- Spent two weeks of my life to <s>mostly procrastinate</s> change the world.`
 
-let winText = `Congratulations! You have reached the end and beaten this game, but for now...`
+let winText = `Why did you waste your time on this mod? You could've been playing anything else, you know?`
 
 // If you add new functions anywhere inside of a layer, and those functions have an effect when called, add them here.
 // (The ones here are examples, all official functions are already taken care of)
@@ -40,11 +44,12 @@ function canGenPoints(){
 // Calculate points/sec!
 function getPointGen() {
 	if(!canGenPoints())
-		return new Decimal(0)
+		return new Decimal(0);
 
-	let gain = new Decimal(1)
-	return gain
-}
+		let gain = new Decimal(0)
+		return gain
+	}
+
 
 // You can add non-layer related variables that should to into "player" and be saved here, along with default values
 function addedPlayerData() { return {
@@ -56,7 +61,7 @@ var displayThings = [
 
 // Determines when the game "ends"
 function isEndgame() {
-	return player.points.gte(new Decimal("e280000000"))
+	return player.aca.totalPoints.gte(new Decimal("10"))
 }
 
 

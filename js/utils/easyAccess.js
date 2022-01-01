@@ -73,3 +73,17 @@ function achievementEffect(layer, id) {
 function gridEffect(layer, id) {
 	return (gridRun(layer, 'getEffect', player[layer].grid[id], id))
 }
+
+//custom functions
+function acaMilestoneKeep() {
+  if(hasMilestone("aca", 0)) player.genericLayer.upgrades = [11]
+  if(hasMilestone("aca", 1)) player.genericLayer.upgrades = [11, 12]
+	if(hasMilestone("aca", 2)) player.genericLayer.upgrades = [11, 12, 13]
+	if(hasMilestone("aca", 3)) player.genericLayer.upgrades = [11, 12, 13, 14]
+	if(hasMilestone("aca", 4)) player.genericLayer.upgrades = [11, 12, 13, 14, 15]
+	if(hasMilestone("aca", 5)) player.genericLayer.upgrades = [11, 12, 13, 14, 15, 21]
+	if(hasMilestone("aca", 6)) player.genericLayer.upgrades = [11, 12, 13, 14, 15, 21, 23]
+	if(hasMilestone("aca", 7)) player.genericLayer.upgrades = [11, 12, 13, 14, 15, 21, 23, 24]
+	if(hasMilestone("aca", 8)) player.genericLayer.upgrades = [11, 12, 13, 14, 15, 21, 23, 24, 25]
+	if(hasMilestone("aca", 9)) player.genericLayer.upgrades = [11, 12, 13, 14, 15, 21, 23, 24, 25, 26]
+}
